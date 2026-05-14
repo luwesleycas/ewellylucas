@@ -309,6 +309,10 @@ html {
   padding-bottom: 60px;
 }
 
+#tentang-pasangan .section-title {
+  padding-bottom: 4px;
+}
+
 .nama-lengkap {
   font-family: 'Rouge Script', sans-serif;
   color: #996E6D;
@@ -522,6 +526,67 @@ body.preloader-site {
   margin: 1rem;
 }
 
+.pix-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 10px;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.pix-key {
+  border: 2px solid #996E6D;
+  border-radius: 10px 0 0 10px;
+  padding: 10px 14px;
+  font-size: 1.15rem;
+  line-height: 1;
+  background: rgba(244, 226, 226, 0.25);
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  flex: 1 1 auto;
+  max-width: 15vw;
+}
+
+.pix-copy-btn {
+  border: 2px solid #996E6D;
+  background-color: #996E6D;
+  color: white;
+  border-radius: 0 10px 10px 0;
+  height: 44px;
+  padding: 10px 14px;
+  font-size: 1.05rem;
+  line-height: 1;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.pix-copy-btn:hover {
+  border-color: #bf7877;
+  background-color: #bf7877;
+  color: white;
+}
+
+.pix-qrcode-wrapper {
+  margin-top: 16px;
+}
+
+.pix-qrcode {
+  width: 240px;
+  max-width: 80vw;
+  border-radius: 12px;
+  border: 2px solid #996E6D;
+  background: white;
+  padding: 10px;
+}
+
 .cashbac-logo-inline {
   width: 160px;
   vertical-align: middle;
@@ -569,6 +634,8 @@ body.preloader-site {
 .dusty-pink-lightest {color: #F4E2E2}
 .dusty-pink-darker {color: #BC8887}
 .dusty-pink-darkest {color: #996E6D}
+.dusty-pink-fucsia {color: #ff32be}
+
 
 .tile {
   border-radius: 10px;
