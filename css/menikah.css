@@ -550,7 +550,7 @@ body.preloader-site {
   text-overflow: ellipsis;
   min-width: 0;
   flex: 1 1 auto;
-  max-width: 15vw;
+  max-width: 30vw;
 }
 
 .pix-copy-btn {
