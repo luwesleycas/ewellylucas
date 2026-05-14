@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="theme-color" content="#BC8887" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Convite de Casamento Ewelly &amp; Lucas</title>
+
+  <meta property="og:title" content="Casamento Ewelly &amp; Lucas - Domingo, 26 de julho de 2026">
+  <meta property="og:description"
+    content="Convite de Casamento Ewelly &amp; Lucas - Domingo, 26 de julho de 2026 às 15h30 em Caruaru - PE">
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:image"
+    content="https://simple-wedding-invitation.dae.ng/image/samantha-gades-x40Q9jrEVT0-unsplash.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Bulma Version 0.8.x-->
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/bulma-tooltip@0.1.5/dist/bulma-tooltip.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/menikah.css" />
+  <link rel="stylesheet" type="text/css" href="css/jquery.countdown.css" />
+  <script src="https://kit.fontawesome.com/2828f7885a.js"
+    integrity="sha384-WAsFbnLEQcpCk8lM1UTWesAf5rGTCvb2Y+8LvyjAAcxK1c3s5c0L+SYOgxvc6PWG"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/jquery.coundown.js"></script>
+  <link rel="icon" type="image/png" href="image/favicon.png" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23064379-20"></script>
+  <!-- Begin Script for Countdown -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-23064379-20');
+  </script>
+  <!-- Begin Script for Countdown -->
+
+  <!-- Github Button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+<body>
+  <!-- Begin Preloader -->
+  <div class="preloader-wrapper">
+    <div class="preloader">
+      <img src="image/favicon.png" alt="Flower" />
+    </div>
+  </div>
+  <!-- End Preloader-->
+
+  <div id="inviteErrorModal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="box has-text-centered">
+        <p id="inviteErrorTitle" class="title is-4">Convite não encontrado</p>
+        <p id="inviteErrorMessage" class="subtitle is-6">Confira o link enviado pelos noivos.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Begin Header -->
+  <div class="header-wrapper" id="home">
+    <!-- Begin Hero -->
+    <section class="hero is-large">
+      <!-- Begin Mobile Nav -->
+      <nav class="navbar is-transparent is-hidden-desktop">
+        <!-- Begin Burger Menu -->
+        <div class="navbar-brand is-fixed-top">
+          <div class="navbar-burger burger" data-target="mobile-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <!-- End Burger Menu -->
+        <div id="mobile-nav" class="navbar-menu">
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <a class="navbar-item" href="#Waktu">
+                Data e horário
+              </a>
+            </div>
+            <div class="navbar-item">
+              <a class="navbar-item" href="#lokasi">
+                Local
+              </a>
+            </div>
+
+            <div class="navbar-item">
+              <a class="navbar-item" href="#tentang-pasangan">
+                Sobre os noivos
+              </a>
+            </div>
+            <div class="navbar-item">
+              <a class="navbar-item" href="#rsvp">
+                Confirmação
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- End Mobile Nav -->
+      <!-- Begin Hero Content-->
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="subtitle">Convite de Casamento</h1>
+          <h2 class="title">Ewelly &amp; Lucas</h2>
+          <p id="guestInfo" class="subtitle is-hidden"></p>
+          <h4 class="subtitle tempatwaktu">
+
+            Domingo, 26 de julho de 2026
+            </br>
+            15h30
+            </br>
+            Caruaru - PE
+
+          </h4>
+        </div>
+        <!-- Start Countdown -->
+        <div>
+          <ul id="hitungmundur">
+            <li><span class="days">00</span>
+              <p class="days_text">Dias</p>
+            </li>
+            <li class="separator">:</li>
+            <li><span class="hours">00</span>
+              <p class="hours_text">Horas</p>
+            </li>
+            <li class="separator">:</li>
+            <li><span class="minutes">00</span>
+              <p class="minutes_text">Minutos</p>
+            </li>
+            <li class="separator">:</li>
+            <li><span class="seconds">00</span>
+              <p class="seconds_text">Segundos</p>
+            </li>
+          </ul>
+          <div class="spasi">
+          </div>
+          <script type="text/javascript">
+            var now = new Date();
+            var day = now.getDate();
+            var month = now.getMonth() + 1;
+            var year = now.getFullYear() + 1;
+
+            var nextyear = month + '/' + day + '/' + year + ' 07:07:07';
+            var harih = '07/26/2026 15:30:00';
+
+            $('#hitungmundur').countdown({
+              date: harih, // TODO Date format: 07/27/2017 17:00:00
+              offset: -3, // TODO Your Timezone Offset
+              day: 'Dia',
+              days: 'Dias',
+              hour: 'Hora',
+              hours: 'Horas',
+              minute: 'Minuto',
+              minutes: 'Minutos',
+              second: 'Segundo',
+              seconds: 'Segundos'
+            });
+          </script>
+        </div>
+        <!-- End Countdown -->
+      </div>
+      <!-- End Hero Content-->
+      <!-- Begin Hero Menu -->
+      <div class="hero-foot ">
+        <div class="hero-foot--wrapper">
+          <div class="columns">
+            <div class="column is-12 hero-menu-desktop has-text-centered">
+              <ul>
+                <li class="is-active">
+                  <a href="#home">Home</a>
+                </li>
+                <li>
+                  <a href="#Waktu">Data e horário</a>
+                </li>
+                <li>
+                  <a href="#lokasi">Local</a>
+                </li>
+                <li>
+                  <a href="#tentang-pasangan">Sobre os noivos</a>
+                </li>
+
+                <li>
+                  <a href="#rsvp">Confirmação</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Hero Menu -->
+    </section>
+    <!-- End Hero -->
+  </div>
+  <!-- End Header -->
+
+  <!-- Begin Main Content -->
+  <div class="main-content">
+    <!-- Begin regular-section-->
+    <section class="section-light no-padding-top regular-section has-text-centered has-vertically-aligned-content"
+      id="regular-section">
+
+      <div data-aos="fade-up" data-aos-easing="linear">
+        <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
+      </div>
+
+      <p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
+        Nosso grande dia está chegando, e não poderíamos celebrá-lo sem pessoas especiais como você.
+        <br />
+        Com muito carinho, convidamos <strong id="guestNameInline">você</strong> para o nosso casamento.
+        <br />
+        Sua presença fará parte das memórias mais felizes das nossas vidas.
+      </p>
+
+      <span class="space40px"></span>
+      <span class="space40px"></span>
+
+      <div data-aos="fade-up" data-aos-easing="linear">
+        <div class="nama-lengkap">
+          Ewelly
+        </div>
+        <div class="ampersand">&</div>
+        <div class="nama-lengkap">
+          Lucas
+        </div>
+
+      </div>
+      <span class="space40px"></span>
+      <div data-aos="fade-up" data-aos-easing="linear">
+        <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
+      </div>
+      <span class="space40px"></span>
+      <span class="space40px"></span>
+    </section>
+    <!-- End regular-section-->
+
+    <!-- Begin Waktu Section -->
+    <section class="section-dark" id="Waktu">
+      <div class="container">
+
+        <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
+          <h1 class="title has-text-centered section-title">Data e horário</h1>
+        </div>
+        <div class="columns is-multiline" data-aos="fade-up" data-aos-easing="linear">
+          <div class="column is-4 has-vertically-aligned-content">
+
+            <p class="is-larger has-text-centered">
+            <div class="waktu tanggal-hari has-text-centered">Domingo</div>
+            <div class="waktu tanggal-angka has-text-centered">26</div>
+            <div class="waktu tanggal-bulan has-text-centered">Julho 2026</div>
+            </p>
+
+          </div>
+          <div class="column is-4 has-vertically-aligned-content">
+
+            <p class="waktu is-larger has-text-centered">
+              Cerimônia:
+              <br>
+              <strong>15h30</strong>
+            </p>
+
+          </div>
+
+          <div class="column is-4 has-vertically-aligned-content">
+
+            <h1 class="waktu is-larger has-text-centered">
+              Recepção:
+              <br>
+              <strong>Logo após</strong>
+            </h1>
+
+
+          </div>
+
+        </div>
+      </div>
+      <div class="space40px"></div>
+      <div class="main-content has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+
+      </div>
+    </section>
+
+    <!-- Begin Lokasi Section -->
+    <section class="section-darker" id="lokasi">
+      <div class="container">
+        <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
+          <h1 class="title has-text-centered section-title">Local</h1>
+          <p class="tempat is-larger has-text-centered">
+            <strong>Caruaru - PE</strong>
+            <br>
+            R. Comercial, 6135 - Malhada de Pedra
+            <br>
+            Caruaru - PE, 55106-500
+            <br>
+          </p>
+        </div>
+        <div class="section-map" data-aos="fade-up" data-aos-easing="linear">
+          <iframe src="https://www.google.com/maps?q=-8.2461222,-35.913454&amp;output=embed" width="100%" height="450"
+            frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+        <div class="space40px"></div>
+        <div class="has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+          <a href="https://maps.app.goo.gl/Qe2j1cyFZsWRk6ELA" class="button btn-cta" target="_blank" data-aos="zoom-in">
+            <i class="far fa-directions"></i>
+            &nbsp;&nbsp;Abrir no Google Maps
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- End Lokasi Content -->
+
+    <!-- Begin Tentang [Calon Mempelai Wanita] and [Calon Mempelai [Pria] -->
+    <section class="section-light regular-section is-fullheight" id="tentang-pasangan">
+      <div class="container">
+        <div class="columns is-multiline">
+          <div class="column has-text-centered is-12 prolog">
+            <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">Sobre os
+              noivos</h1>
+
+
+
+            <!-- IMAGES -->
+            <div class=" tile">
+              <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                  <article class="tile is-child foto1 notification foto1" data-aos="fade-up" data-aos-easing="linear">
+                    <div class="content">
+                      <p class="title-foto">Foto 1</p>
+                      <p class="subtitle-foto">
+                        O começo de tudo
+                      </p>
+                    </div>
+                  </article>
+                </div>
+                <div class="tile is-parent">
+                  <article class="tile is-child notification foto2" data-aos="fade-up" data-aos-easing="linear">
+                    <div class="content">
+                      <p class="title-foto">
+                        Foto 2
+                      </p>
+                      <p class="subtitle-foto">
+                        Uma história que virou amor
+                      </p>
+                    </div>
+                  </article>
+                </div>
+                <div class="tile is-parent">
+                  <article class="tile is-child notification foto3" data-aos="fade-up" data-aos-easing="linear">
+                    <div class="content">
+                      <p class="title-foto">
+                        Foto 3
+                      </p>
+                      <p class="subtitle-foto">
+                        Momentos inesquecíveis
+                      </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div class="space24px"></div>
+            <div class="tile is-ancestor">
+              <div class="tile is-parent">
+                <article class="tile is-child notification foto6" data-aos="fade-up" data-aos-easing="linear">
+                  <div class="content">
+                    <p class="title-foto">Foto 4</p>
+                    <p class="subtitle-foto">Família</p>
+                  </div>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child notification foto4" data-aos="fade-up" data-aos-easing="linear">
+                  <div class="content">
+                    <p class="title-foto">Foto 5</p>
+                    <p class="subtitle-foto">O “sim”</p>
+                  </div>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child notification foto5" data-aos="fade-up" data-aos-easing="linear">
+                  <div class="content">
+                    <p class="title-foto">Foto 6</p>
+                    <p class="subtitle-foto">Nosso grande dia</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <!-- IMAGES -->
+            <div class="space40px"></div>
+            <div data-aos="fade-up" data-aos-easing="linear">
+              <img src="image/divider-leaves.png" class="divider has-vertically-align" alt="~~~">
+            </div>
+            <div class="space40px"></div>
+            <div class="space40px"></div>
+
+          </div>
+        </div>
+    </section>
+    <!-- End Tentang [Calon Mempelai Wanita] and [Calon Mempelai [Pria] -->
+
+    <!-- Begin RSVP Content -->
+    <section class="section-dark contact" id="rsvp">
+      <div class="container">
+        <div class="columns is-multiline">
+          <div class="column is-12 prolog">
+            <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">Confirmação
+              de presença</h1>
+            <span id="guestQtyLine" class="is-hidden is-block has-text-centered">Convite é válido para <strong><span
+                  id="guestQtyInline"></span></strong>
+              convidados.</span>
+          </div>
+          <div class="column is-12 prolog has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+            <p class="h2 subtitle">
+              Para nós, será uma alegria imensa ter você com a gente nesse dia tão especial.
+              <br>
+              Se puder comparecer, por favor confirme no WhatsApp.
+              <br>
+              <br>
+              Data: 26/07/2026 • Horário: 15h30
+              <br>
+              Local: R. Comercial, 6135 - Malhada de Pedra, Caruaru - PE
+            </p>
+
+            <a href="https://api.whatsapp.com/send?text=Ol%C3%A1%21%20Estou%20confirmando%20minha%20presen%C3%A7a%20no%20casamento%20de%20Ewelly%20e%20Lucas.%20Data%3A%2026%2F07%2F2026%20%C3%A0s%2015h30.%20Local%3A%20R.%20Comercial%2C%206135%20-%20Malhada%20de%20Pedra%2C%20Caruaru%20-%20PE.%20Obrigado%21"
+              class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
+              <i class="fab fa-whatsapp"></i>
+              &nbsp;&nbsp;Confirmar no WhatsApp
+            </a>
+
+
+            <div class="space40px"></div>
+            <div data-aos="fade-up" data-aos-easing="linear">
+              <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
+            </div>
+            <div class="space40px"></div>
+            <p class="h2 subtitle" data-aos="fade-up" data-aos-easing="linear">
+              Com carinho,
+              <br>
+              Ewelly &amp; Lucas
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- End RSVP Content -->
+  </div>
+  <!-- End Main Content -->
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/menikah.js"></script>
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      easing: "ease-out",
+      duration: 800,
+    });
+  </script>
+</body>
+
+</html>
