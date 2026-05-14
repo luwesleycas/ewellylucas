@@ -218,6 +218,15 @@ html {
   padding: 0 0 0 0 ;
 }
 
+#lokasi .container.is-fluid {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#lokasi .section-map iframe {
+  display: block;
+}
+
 .main-content .section-light {
   padding: 80px 40px;
 }
@@ -311,6 +320,29 @@ html {
 
 #tentang-pasangan .section-title {
   padding-bottom: 4px;
+}
+
+#tentang-pasangan.section-light {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#tentang-pasangan .container.is-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#tentang-pasangan .form-embed-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#tentang-pasangan .form-embed-iframe {
+  width: 100%;
+  min-height: 700px;
+  border: none;
+  display: block;
 }
 
 .nama-lengkap {
