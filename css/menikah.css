@@ -340,9 +340,16 @@ html {
 
 #tentang-pasangan .form-embed-iframe {
   width: 100%;
-  min-height: 700px;
+  min-height: 1200px;
   border: none;
   display: block;
+  overflow: hidden;
+}
+
+@media (max-width: 599px) {
+  #tentang-pasangan .form-embed-iframe {
+    min-height: 1400px;
+  }
 }
 
 .nama-lengkap {
