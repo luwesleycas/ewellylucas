@@ -476,6 +476,69 @@ vertical-align: middle;
   background-color: #BC8887;
 }
 
+.scroll-hint {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.scroll-hint.is-visible {
+  opacity: 1;
+}
+
+.scroll-hint-inner {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  text-align: center;
+  animation: scrollHintBounce 1.6s ease-in-out infinite;
+}
+
+.scroll-hint-text {
+  color: #BC8887;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.scroll-hint-icon {
+  color: #BC8887;
+  font-size: 1.05rem;
+}
+
+@keyframes scrollHintBounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 599px) {
+  .scroll-hint {
+    bottom: 14px;
+  }
+
+  .scroll-hint-text {
+    font-size: 0.88rem;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   background-color: #F4E2E2;

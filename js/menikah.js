@@ -150,7 +150,34 @@ function scrollFunction() {
   } else {
     document.getElementById("toTop").style.display = "none";
   }
+
+  var hint = document.getElementById("scrollHint");
+  if (!hint) return;
+  if (document.documentElement.classList.contains("is-clipped")) {
+    hint.classList.remove("is-visible");
+    return;
+  }
+  var docEl = document.documentElement;
+  var scrollTop = docEl.scrollTop || document.body.scrollTop || 0;
+  var scrollMax = (docEl.scrollHeight || document.body.scrollHeight) - docEl.clientHeight;
+  if (scrollMax <= 60) {
+    hint.classList.remove("is-visible");
+    return;
+  }
+  if (scrollTop >= scrollMax - 40) {
+    hint.classList.remove("is-visible");
+  } else {
+    hint.classList.add("is-visible");
+  }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  scrollFunction();
+});
+
+window.addEventListener("load", function () {
+  scrollFunction();
+});
 
 // Preloader
 $(document).ready(function($) {
