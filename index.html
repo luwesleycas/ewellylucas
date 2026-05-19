@@ -398,6 +398,7 @@
             </div>
             <br>
             Chave Pix:
+            <br>
             <span class="pix-copy">
               <span id="pixKey"
                 class="pix-key">luwesleycas@gmail.com</span>
@@ -498,11 +499,14 @@
 
       var qrImg = document.getElementById("pixQrCode");
       if (qrImg) {
-        var pixText = getCopyText("#pixKey");
-        if (pixText) {
-          qrImg.src =
-            "https://api.qrserver.com/v1/create-qr-code/?size=260x260&margin=10&data=" +
-            encodeURIComponent(pixText);
+        var currentSrc = (qrImg.getAttribute("src") || "").trim();
+        if (!currentSrc) {
+          var pixText = getCopyText("#pixKey");
+          if (pixText) {
+            qrImg.src =
+              "https://api.qrserver.com/v1/create-qr-code/?size=260x260&margin=10&data=" +
+              encodeURIComponent(pixText);
+          }
         }
       }
     })();
