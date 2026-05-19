@@ -60,8 +60,25 @@ document.addEventListener("DOMContentLoaded", function() {
     var qtyLineEl = document.getElementById("guestQtyLine");
     var qtyEl = document.getElementById("guestQtyInline");
     var qty = Number(qtd);
-    if (qtyLineEl && qtyEl && Number.isFinite(qty) && qty > 0) {
-      qtyEl.textContent = String(qty);
+    var isSingle = Number.isFinite(qty) && qty === 1;
+
+    var introPluralEl = document.getElementById("guestIntroPlural");
+    var introSingleEl = document.getElementById("guestIntroSingular");
+    var outroPluralEl = document.getElementById("guestOutroPlural");
+    var outroSingleEl = document.getElementById("guestOutroSingular");
+    var qtyPluralEl = document.getElementById("guestQtyPlural");
+    var qtySingleEl = document.getElementById("guestQtySingular");
+
+    if (introPluralEl) introPluralEl.classList.toggle("is-hidden", isSingle);
+    if (introSingleEl) introSingleEl.classList.toggle("is-hidden", !isSingle);
+    if (outroPluralEl) outroPluralEl.classList.toggle("is-hidden", isSingle);
+    if (outroSingleEl) outroSingleEl.classList.toggle("is-hidden", !isSingle);
+
+    if (qtyPluralEl) qtyPluralEl.classList.toggle("is-hidden", isSingle);
+    if (qtySingleEl) qtySingleEl.classList.toggle("is-hidden", !isSingle);
+
+    if (qtyLineEl && Number.isFinite(qty) && qty > 0) {
+      if (qtyEl) qtyEl.textContent = String(qty);
       qtyLineEl.classList.remove("is-hidden");
     } else if (qtyLineEl) {
       qtyLineEl.classList.add("is-hidden");
