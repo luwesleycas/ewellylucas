@@ -174,6 +174,16 @@ function scrollFunction() {
     hint.classList.remove("is-visible");
     return;
   }
+
+  var presentesSection = document.getElementById("presentes");
+  if (presentesSection) {
+    var rect = presentesSection.getBoundingClientRect();
+    if (rect.top <= window.innerHeight - 10) {
+      hint.classList.remove("is-visible");
+      return;
+    }
+  }
+
   var docEl = document.documentElement;
   var scrollTop = docEl.scrollTop || document.body.scrollTop || 0;
   var scrollMax = (docEl.scrollHeight || document.body.scrollHeight) - docEl.clientHeight;
