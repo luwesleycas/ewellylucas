@@ -162,10 +162,13 @@ window.onscroll = function() {
 };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("toTop").style.display = "block";
-  } else {
-    document.getElementById("toTop").style.display = "none";
+  var toTopEl = document.getElementById("toTop");
+  if (toTopEl) {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      toTopEl.style.display = "block";
+    } else {
+      toTopEl.style.display = "none";
+    }
   }
 
   var hint = document.getElementById("scrollHint");
