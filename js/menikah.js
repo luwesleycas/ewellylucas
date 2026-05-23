@@ -68,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var outroSingleEl = document.getElementById("guestOutroSingular");
     var qtyPluralEl = document.getElementById("guestQtyPlural");
     var qtySingleEl = document.getElementById("guestQtySingular");
+    var rsvpSectionEl = document.getElementById("tentang-pasangan");
 
     if (introPluralEl) introPluralEl.classList.toggle("is-hidden", isSingle);
     if (introSingleEl) introSingleEl.classList.toggle("is-hidden", !isSingle);
@@ -76,6 +77,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (qtyPluralEl) qtyPluralEl.classList.toggle("is-hidden", isSingle);
     if (qtySingleEl) qtySingleEl.classList.toggle("is-hidden", !isSingle);
+
+    if (rsvpSectionEl) rsvpSectionEl.classList.toggle("is-hidden", isSingle);
+    var rsvpLinks = document.querySelectorAll('a[href="#tentang-pasangan"]');
+    for (var i = 0; i < rsvpLinks.length; i++) {
+      var link = rsvpLinks[i];
+      var wrapper = link.closest ? link.closest("li") : null;
+      if (!wrapper) wrapper = link.closest ? link.closest(".navbar-item") : null;
+      if (!wrapper) wrapper = link.parentElement;
+      if (wrapper) wrapper.classList.toggle("is-hidden", isSingle);
+    }
 
     if (qtyLineEl && Number.isFinite(qty) && qty > 0) {
       if (qtyEl) qtyEl.textContent = String(qty);
