@@ -610,7 +610,7 @@ body.preloader-site {
   font-size: 1.2rem;
   border-radius: 10px;
   border: 2px solid #bf7877;
-  width:  210px;
+  width:  320px;
   height: 65px;
   align-items: center;
   margin: 1rem;
@@ -618,7 +618,7 @@ body.preloader-site {
 
 .btn-cta {
   background-color: #996E6D;
-  width:  210px;
+  width:  320px;
   height: 65px;
   color: white;
   font-size: 1.2rem;
