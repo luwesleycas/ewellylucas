@@ -618,7 +618,7 @@ body.preloader-site {
 
 .btn-cta {
   background-color: #996E6D;
-  width:  320px;
+  width:  250px;
   height: 65px;
   color: white;
   font-size: 1.2rem;
@@ -687,6 +687,25 @@ body.preloader-site {
   border: 2px solid #996E6D;
   background: white;
   padding: 10px;
+}
+
+.presentes-info-box {
+  background: white;
+  border: 2px solid #996E6D;
+  border-radius: 14px;
+  padding: 18px 16px;
+  max-width: 560px;
+  width: 100%;
+  margin: 0 auto 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.presentes-info-box .subtitle {
+  margin-bottom: 14px;
+}
+
+.presentes-info-box .btn-cta {
+  margin: 0;
 }
 
 .cashbac-logo-inline {
